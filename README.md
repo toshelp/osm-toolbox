@@ -8,6 +8,7 @@
 - [osmium-tool](https://osmcode.org/osmium-tool/)
 - [osmctools](https://github.com/ramunasd/osmctools)
 - [tilemaker](https://github.com/systemed/tilemaker)
+- [tippecanoe](https://github.com/mapbox/tippecanoe)
 - [spritezero-cli](https://github.com/mapbox/spritezero-cli)  
 ##### Usage
 
