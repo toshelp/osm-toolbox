@@ -2,7 +2,7 @@
 
 ## How to docker container start
 
-    docker run -it --rm -v $(pwd)/data:/root/data toshelp/osm-toolbox:1.0 bash
+    docker run -it --rm -v $(pwd)/data:/root/data toshelp/osm-toolbox:1. bash
 
 ## Included tools
 - [osmosis](https://github.com/openstreetmap/osmosis)
