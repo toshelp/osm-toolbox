@@ -5,6 +5,7 @@
     docker run -it --rm -v $(pwd)/data:/root/data toshelp/osm-toolbox:1.0 bash
 
 ## Included tools
+- [osmosis](https://github.com/openstreetmap/osmosis)
 - [osmium-tool](https://osmcode.org/osmium-tool/)
 - [osmctools](https://github.com/ramunasd/osmctools)
 - [tilemaker](https://github.com/systemed/tilemaker)
