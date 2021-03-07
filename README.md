@@ -2,9 +2,10 @@
 
 ## How to docker container start
 
-    docker run -it --rm -v $(pwd)/data:/root/data toshelp/osm-toolbox:1.2 bash
+    docker run -it --rm -v $(pwd)/data:/root/data toshelp/osm-toolbox:1.3 bash
 
 ## Included tools
+- [GDAL](https://gdal.org/)
 - [osmosis](https://github.com/openstreetmap/osmosis)
 - [osmium-tool](https://osmcode.org/osmium-tool/)
 - [osmctools](https://github.com/ramunasd/osmctools)
