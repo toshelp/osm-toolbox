@@ -3,7 +3,7 @@ MAINTAINER toshelp
 
 #Install dependency tools
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update && apt-get install -y curl wget git vim build-essential pkg-config python osmium-tool osmctools libsqlite3-dev zlib1g-dev liblua5.1-0 liblua5.1-0-dev libprotobuf-dev protobuf-compiler shapelib libshp-dev libboost-program-options-dev libboost-filesystem-dev libboost-system-dev default-jre
+RUN apt-get update && apt-get install -y curl wget git vim build-essential pkg-config python osmium-tool osmctools libsqlite3-dev zlib1g-dev liblua5.1-0 liblua5.1-0-dev libprotobuf-dev protobuf-compiler shapelib libshp-dev libboost-program-options-dev libboost-filesystem-dev libboost-system-dev default-jre gdal-bin
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 SHELL ["/bin/bash", "--login", "-i", "-c"]
 RUN source /root/.bashrc && nvm install v12.20.1 && npm install -g yarn
