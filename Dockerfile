@@ -27,7 +27,7 @@ RUN cd tippecanoe && make -j && make install
 
 #Install tilemaker
 RUN git clone https://github.com/systemed/tilemaker.git
-RUN cd tilemaker && git checkout 68fe72d85bf37b58773ec9015cbc243ca6009301 && make && make install
+RUN cd tilemaker && git checkout 9a1a0b46c9e0bd0ad3e9fede756f692723ed2615 && make && make install
 
 #Install osmosis
 RUN wget https://github.com/openstreetmap/osmosis/releases/download/0.48.3/osmosis-0.48.3.tgz

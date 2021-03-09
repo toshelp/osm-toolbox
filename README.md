@@ -2,7 +2,7 @@
 
 ## How to docker container start
 
-    docker run -it --rm -v $(pwd)/data:/root/data toshelp/osm-toolbox:1.4 bash
+    docker run -it --rm -v $(pwd)/data:/root/data toshelp/osm-toolbox:1.5 bash
 
 ## Included tools
 - [GDAL](https://gdal.org/)
