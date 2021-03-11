@@ -1,6 +1,6 @@
 # osm-toolbox
 
-## How to docker container start
+## How to start docker container
 
     - Recommended
     $ docker run -it --rm -v $(pwd):/root/data toshelp/osm-toolbox:1.5 bash
