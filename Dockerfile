@@ -3,7 +3,7 @@ MAINTAINER toshelp
 
 #Install dependency tools
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update && apt-get install -y curl wget git vim build-essential pkg-config python osmium-tool osmctools libsqlite3-dev zlib1g-dev liblua5.1-0 liblua5.1-0-dev libprotobuf-dev protobuf-compiler shapelib libshp-dev libboost-program-options-dev libboost-filesystem-dev libboost-system-dev default-jre gdal-bin
+RUN apt-get update && apt-get install -y curl wget git vim build-essential pkg-config python osmium-tool osmctools libsqlite3-dev zlib1g-dev libluajit-5.1 libluajit-5.1-dev libprotobuf-dev protobuf-compiler shapelib libshp-dev libboost-program-options-dev libboost-filesystem-dev libboost-system-dev default-jre gdal-bin
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 SHELL ["/bin/bash", "--login", "-i", "-c"]
 RUN source /root/.bashrc && nvm install v12.20.1 && npm install -g yarn
@@ -27,7 +27,8 @@ RUN cd tippecanoe && make -j && make install
 
 #Install tilemaker
 RUN git clone https://github.com/systemed/tilemaker.git
-RUN cd tilemaker && git checkout 9a1a0b46c9e0bd0ad3e9fede756f692723ed2615 && make && make install
+COPY luajit.patch /root/tilemaker/
+RUN cd tilemaker && git checkout 9a1a0b46c9e0bd0ad3e9fede756f692723ed2615 && git apply luajit.patch && make && make install
 
 #Install osmosis
 RUN wget https://github.com/openstreetmap/osmosis/releases/download/0.48.3/osmosis-0.48.3.tgz

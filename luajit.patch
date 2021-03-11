@@ -1,0 +1,47 @@
+diff --git a/Makefile b/Makefile
+index 1fc843f..1cee985 100644
+--- a/Makefile
++++ b/Makefile
+@@ -4,25 +4,25 @@
+ ifneq ("$(wildcard /usr/local/include/luajit-2.1/lua.h)","")
+   LUA_VER := LuaJIT 2.1
+   LUA_CFLAGS := -I/usr/local/include/luajit-2.1
+-  LUA_LIBS := -lluajit
++  LUA_LIBS := -lluajit-5.1
+   LUAJIT := 1
+ 
+ else ifneq ("$(wildcard /usr/include/luajit-2.1/lua.h)","")
+   LUA_VER := LuaJIT 2.1
+   LUA_CFLAGS := -I/usr/include/luajit-2.1
+-  LUA_LIBS := -lluajit
++  LUA_LIBS := -lluajit-5.1
+   LUAJIT := 1
+ 
+ else ifneq ("$(wildcard /usr/local/include/luajit-2.0/lua.h)","")
+   LUA_VER := LuaJIT 2.0
+   LUA_CFLAGS := -I/usr/local/include/luajit-2.0
+-  LUA_LIBS := -lluajit
++  LUA_LIBS := -lluajit-5.1
+   LUAJIT := 1
+ 
+ else ifneq ("$(wildcard /usr/include/luajit-2.0/lua.h)","")
+   LUA_VER := LuaJIT 2.0
+   LUA_CFLAGS := -I/usr/include/luajit-2.0
+-  LUA_LIBS := -lluajit
++  LUA_LIBS := -lluajit-5.1
+   LUAJIT := 1
+ 
+ else ifneq ("$(wildcard /usr/local/include/lua/lua.h)","")
+diff --git a/include/kaguya.hpp b/include/kaguya.hpp
+index ef54bdc..e0c1611 100644
+--- a/include/kaguya.hpp
++++ b/include/kaguya.hpp
+@@ -5124,7 +5124,7 @@ namespace kaguya
+ 		static get_type get(lua_State* l, int index)
+ 		{
+ 			int isnum=0;
+-			get_type num = static_cast<T>(lua_tonumberx(l,index,&isnum));
++			get_type num = static_cast<T>(kaguya::lua_tonumberx(l,index,&isnum));
+ 			if (!isnum) {
+ 				throw LuaTypeMismatch();
+ 			}
