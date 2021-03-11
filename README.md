@@ -2,7 +2,11 @@
 
 ## How to docker container start
 
-    docker run -it --rm -v $(pwd)/data:/root/data toshelp/osm-toolbox:1.5 bash
+    - Recommended
+    $ docker run -it --rm -v $(pwd):/root/data toshelp/osm-toolbox:1.5 bash
+
+    - Experimental (Using luajit with tilemaker)
+    $ docker run -it --rm -v $(pwd):/root/data toshelp/osm-toolbox:1.5-tilemaker-luajit bash
 
 ## Included tools
 - [GDAL](https://gdal.org/)
