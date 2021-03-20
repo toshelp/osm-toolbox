@@ -4,9 +4,16 @@
 
     - Recommended
     $ docker run -it --rm -v $(pwd):/root/data toshelp/osm-toolbox:1.5 bash
-
+    
     - Experimental (Using luajit with tilemaker)
     $ docker run -it --rm -v $(pwd):/root/data toshelp/osm-toolbox:1.5-tilemaker-luajit bash
+
+    - Alternative (e.g. tilemaker)
+    $ docker run -it --rm -v $(pwd):/root/data toshelp/osm-toolbox:1.5 tilemaker \
+      --input ./data/"your.osm.pbf file" \
+      --output ./data/"your .mbiles" \
+      --config ./tilemaker/resources/config-openmaptiles.json \
+      --process ./tilemaker/resources/process-openmaptiles.lua
 
 ## Included tools
 - [GDAL](https://gdal.org/)
