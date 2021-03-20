@@ -14,7 +14,6 @@ RUN apt-get update && apt-get install -y \
     libboost-filesystem-dev \
     libboost-program-options-dev \
     libboost-system-dev \
-    libluajit-5.1 \
     libluajit-5.1-dev \
     libprotobuf-dev \
     libshp-dev \
@@ -52,14 +51,16 @@ RUN git clone https://github.com/cs09g/spritezero-png.git && \
 RUN git clone https://github.com/mapbox/tippecanoe.git && \
     cd tippecanoe && \
     git checkout 18e53cd7fb9ae6be8b89d817d69d3ce06f30eb9d && \
-    make -j && make install
+    make -j && \
+    make install
 
 #Install tilemaker
 RUN git clone https://github.com/systemed/tilemaker.git
-COPY luajit.patch /root/tilemaker/
 RUN cd tilemaker && \
-    git checkout 9a1a0b46c9e0bd0ad3e9fede756f692723ed2615 && \
-    git apply luajit.patch && \
+    git checkout 27b9d4ca9b10e58f754a57d958b33942fdc34160 && \
+    mkdir build && \
+    cd build && \
+    cmake .. && \
     make && \
     make install
 
