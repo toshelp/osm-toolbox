@@ -57,7 +57,7 @@ RUN git clone https://github.com/mapbox/tippecanoe.git && \
 #Install tilemaker
 RUN git clone https://github.com/systemed/tilemaker.git
 RUN cd tilemaker && \
-    git checkout 27b9d4ca9b10e58f754a57d958b33942fdc34160 && \
+    git checkout 0a9a49c0e9e139ae0bac16b98e0477bca7336dce && \
     mkdir build && \
     cd build && \
     cmake .. && \
