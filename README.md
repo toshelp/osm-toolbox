@@ -5,6 +5,9 @@
     - Recommended
     $ docker run -it --rm -v $(pwd):/root/data toshelp/osm-toolbox:1.7 bash
 
+    - Experimental 
+    $ docker run -it --rm -v $(pwd):/root/data toshelp/osm-toolbox:1.7-tilemaker-boost-1.76beta1 bash
+
     - Alternative (e.g. tilemaker)
     $ docker run -it --rm -v $(pwd):/root/data toshelp/osm-toolbox:1.7 tilemaker \
       --input ./data/"your.osm.pbf file" \
