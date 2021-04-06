@@ -11,9 +11,6 @@ RUN apt-get update && apt-get install -y \
     gdal-bin \
     git \
     imagemagick \
-    libboost-filesystem-dev \
-    libboost-program-options-dev \
-    libboost-system-dev \
     libluajit-5.1-dev \
     libprotobuf-dev \
     libshp-dev \
@@ -60,9 +57,7 @@ RUN git clone https://github.com/boostorg/boost.git && \
     git checkout 8b0cc73f62c2c6b44f798b885892f8c41e8a4d42 && \
     git submodule update --init && \
     ./bootstrap.sh && \
-    ./b2 install --prefix=/usr; exit 0 && \
-    cd .. && \
-    rm -rf ./boost
+    ./b2 install --prefix=/usr; exit 0
 
 #Install tilemaker
 RUN git clone https://github.com/systemed/tilemaker.git
