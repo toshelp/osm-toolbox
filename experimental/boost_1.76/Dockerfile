@@ -51,10 +51,10 @@ RUN git clone https://github.com/mapbox/tippecanoe.git && \
     make -j && \
     make install
 
-#Install boost 1.76 beta-1
+#Install boost 1.76
 RUN git clone https://github.com/boostorg/boost.git && \
     cd boost && \
-    git checkout 8b0cc73f62c2c6b44f798b885892f8c41e8a4d42 && \
+    git checkout ccb2ab3b4384a16deafaa849de509bce2b2cbada && \
     git submodule update --init && \
     ./bootstrap.sh && \
     ./b2 install --prefix=/usr; exit 0
