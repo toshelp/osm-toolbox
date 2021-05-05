@@ -62,7 +62,7 @@ RUN git clone https://github.com/boostorg/boost.git && \
 #Install tilemaker
 RUN git clone https://github.com/systemed/tilemaker.git
 RUN cd tilemaker && \
-    git checkout 0a9a49c0e9e139ae0bac16b98e0477bca7336dce && \
+    git checkout 12b34febc71df71da26529a58f48bbd750c7c194 && \
     mkdir build && \
     cd build && \
     cmake .. && \
