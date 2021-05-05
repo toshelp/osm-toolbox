@@ -3,13 +3,13 @@
 ## How to start docker container
 
     - Recommended
-    $ docker run -it --rm -v $(pwd):/root/data toshelp/osm-toolbox:1.7 bash
+    $ docker run -it --rm -v $(pwd):/root/data toshelp/osm-toolbox:1.8 bash
 
     - Experimental 
-    $ docker run -it --rm -v $(pwd):/root/data toshelp/osm-toolbox:1.7-tilemaker-boost-1.76beta1 bash
+    $ docker run -it --rm -v $(pwd):/root/data toshelp/osm-toolbox:1.8-tilemaker-boost-1.76 bash
 
     - Alternative (e.g. tilemaker)
-    $ docker run -it --rm -v $(pwd):/root/data toshelp/osm-toolbox:1.7 tilemaker \
+    $ docker run -it --rm -v $(pwd):/root/data toshelp/osm-toolbox:1.8 tilemaker \
       --input ./data/"your.osm.pbf file" \
       --output ./data/"your .mbiles" \
       --config ./tilemaker/resources/config-openmaptiles.json \
