@@ -22,6 +22,7 @@ RUN apt-get update && apt-get install -y \
     python \
     shapelib \
     unzip \
+    valgrind \
     vim \
     wget \
     zlib1g-dev
