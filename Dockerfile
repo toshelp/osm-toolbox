@@ -72,3 +72,8 @@ RUN wget https://github.com/openstreetmap/osmosis/releases/download/0.48.3/osmos
     rm -rf ./osmosis-0.48.3.tgz && \
     ln -s /root/osmosis/bin/osmosis /usr/local/bin/osmosis
 
+#Install MBUtil
+RUN git clone https://github.com/mapbox/mbutil.git && \
+    cd mbutil && \
+    git checkout 2fc4161f9be890a65d07f5e7b2ed0c8a0a123ed6
+
