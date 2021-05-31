@@ -3,13 +3,13 @@
 ## How to start docker container
 
     - Recommended
-    $ docker run -it --rm -v $(pwd):/root/data toshelp/osm-toolbox:1.8 bash
+    $ docker run -it --rm -v $(pwd):/root/data toshelp/osm-toolbox:1.9 bash
 
     - Experimental 
     $ docker run -it --rm -v $(pwd):/root/data toshelp/osm-toolbox:1.8-tilemaker-boost-1.76 bash
 
     - Alternative (e.g. tilemaker)
-    $ docker run -it --rm -v $(pwd):/root/data toshelp/osm-toolbox:1.8 tilemaker \
+    $ docker run -it --rm -v $(pwd):/root/data toshelp/osm-toolbox:1.9 tilemaker \
       --input ./data/"your.osm.pbf file" \
       --output ./data/"your .mbiles" \
       --config ./tilemaker/resources/config-openmaptiles.json \
@@ -25,3 +25,4 @@
 - [spritezero-cli](https://github.com/mapbox/spritezero-cli)  
 - [spritezero-png](https://github.com/cs09g/spritezero-png)
 - [node-fontnik](https://github.com/mapbox/node-fontnik)
+- [MBUtil](https://github.com/mapbox/mbutil)
