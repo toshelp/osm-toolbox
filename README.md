@@ -26,3 +26,4 @@
 - [spritezero-png](https://github.com/cs09g/spritezero-png)
 - [node-fontnik](https://github.com/mapbox/node-fontnik)
 - [MBUtil](https://github.com/mapbox/mbutil)
+- [vt2geojson](https://github.com/mapbox/vt2geojson)

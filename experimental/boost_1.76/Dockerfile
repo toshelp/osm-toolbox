@@ -77,3 +77,6 @@ RUN wget https://github.com/openstreetmap/osmosis/releases/download/0.48.3/osmos
     rm -rf ./osmosis-0.48.3.tgz && \
     ln -s /root/osmosis/bin/osmosis /usr/local/bin/osmosis
 
+#Install vt2geojson
+RUN npm install -g vt2geojson@1.1.0
+

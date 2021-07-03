@@ -77,3 +77,5 @@ RUN git clone https://github.com/mapbox/mbutil.git && \
     cd mbutil && \
     git checkout 2fc4161f9be890a65d07f5e7b2ed0c8a0a123ed6
 
+#Install vt2geojson
+RUN npm install -g vt2geojson@1.1.0
