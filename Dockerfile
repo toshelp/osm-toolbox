@@ -24,6 +24,7 @@ RUN apt-get update && apt-get install -y \
     pkg-config \
     protobuf-compiler \ 
     python \
+    rapidjson-dev \
     shapelib \
     unzip \
     vim \
@@ -58,7 +59,7 @@ RUN git clone https://github.com/mapbox/tippecanoe.git && \
 #Install tilemaker
 RUN git clone https://github.com/systemed/tilemaker.git
 RUN cd tilemaker && \
-    git checkout 631864ab5a206f77bfac1bbed191d196dd2960eb && \
+    git checkout 3f8b4e2f600dac77d1de023757144813ab998071 && \
     mkdir build && \
     cd build && \
     cmake .. && \
